@@ -1,6 +1,7 @@
 #pragma once
 #include "../Blossom Engine/Math/MatrixCalculate.h"
 #include <vector>
+#include "../Input/input.h"
 
 enum ModelName {
 	block,
@@ -23,5 +24,6 @@ public:
 private:
 	static const int32_t kMaxModelData = 2;
 	ModelData modelData_[kMaxModelData];
+	Input* input_;
 };
 

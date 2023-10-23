@@ -38,6 +38,9 @@ ModelData ObjManager::LoadObjFile(const std::string& directoryPath, const std::s
 			Vector4 position;
 			s >> position.x >> position.y >> position.z;
 			position.z *= -1.0f;
+			if (input_->PressKey(DIK_SPACE)) {
+				position.z -= 10.f;
+			}
 			position.w = 1.0f;
 			positions.push_back(position);
 		}
