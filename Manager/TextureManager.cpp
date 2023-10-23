@@ -20,9 +20,9 @@ TextureManager::~TextureManager() {
 
 void TextureManager::TransferTexture(const Microsoft::WRL::ComPtr<ID3D12DescriptorHeap>& srvDescriptorHeap) {
 	// 画像の読み込み
-	mipImages_[UVCHEKER] = LoadTexture("resources/uvChecker.png");
-	mipImages_[MONSTERBALL] = LoadTexture("resources/monsterBall.png");
-	mipImages_[BLOCK] = LoadTexture("../Resources/block/block.png");
+	mipImages_[UVCHEKER] = LoadTexture("Resources/uvChecker.png");
+	mipImages_[MONSTERBALL] = LoadTexture("Resources/monsterBall.png");
+	mipImages_[BLOCK] = LoadTexture("Resources/block/block.png");
 
 	DirectX::TexMetadata metadata[kMaxImages]{};
 	for (uint32_t i = 0; i < kMaxImages; i++) {

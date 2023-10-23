@@ -1,7 +1,7 @@
 #include "../camera/DebugCamera.h"
 #include "../Blossom Engine/components/Input/Input.h"
 #include "../ImGui/ImGuiManager.h"
-
+#include "../Necessary/Map/MapManager.h"
 
 DebugCamera* DebugCamera::GetInstance() {
 	static DebugCamera instance;
@@ -47,19 +47,19 @@ void DebugCamera::Update() {
 	if (offsetRotation_.z < 0.0f)
 		offsetRotation_.z += 6.28f;
 
-	//Vector3 offset = TransformNormal(offset_, MakeRotateMatrix(offsetRotation_));
+	Vector3 offset = TransformNormal(offset_, MakeRotateMatrix(offsetRotation_));
 
 	//// 座標をオフセット分ずらす
-	//translation_ = Add(rotationCenterPosition_, offset);
-	//rotation_ = offsetRotation_;
+	translation_ = V3Add(rotationCenterPosition_, offset);
+	rotation_ = offsetRotation_;
 
-	//worldTransform_ = MakeAffineMatrix({ 1,1,1 }, rotation_, translation_);
-	//viewMatrix_ = Inverse(worldTransform_);
+	worldTransform_ = MakeAffineMatrix({ 1,1,1 }, rotation_, translation_);
+	viewMatrix_ = Inverse(worldTransform_);
 }
 
-//void DebugCamera::SetRotationCenterPosition() {
-//	rotationCenterPosition_ = MapManager::GetInstance()->GetCurrentMap()->GetMapCenterPosition();
-//}
+void DebugCamera::SetRotationCenterPosition() {
+	rotationCenterPosition_ = MapManager::GetInstance()->GetCurrentMap()->GetMapCenterPosition();
+}
 
 void DebugCamera::InputController() {
 	XINPUT_STATE joyState;

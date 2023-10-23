@@ -64,9 +64,9 @@ void GameManager::Initialize() {
 	GlobalVariables::GetInstance()->LoadFiles();
 
 	//// マップマネージャーの初期化
-	//MapManager* mapManager = MapManager::GetInstance();
-	//mapManager->Initialize();
-	//mapManager->SetCurrentMap(0);
+	MapManager* mapManager = MapManager::GetInstance();
+	mapManager->Initialize();
+	mapManager->SetCurrentMap(0);
 
 	//初期シーンの設定
 	sceneNum_ = TITLE_SCENE;

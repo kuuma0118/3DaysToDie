@@ -2,6 +2,8 @@
 #include "IScene.h"
 #include "../Blossom Engine/Sprite/Sprite.h"
 #include "../Blossom Engine/Sphere/Sphere.h"
+#include "../Blossom Engine/components/Input/Input.h"
+#include "../Necessary/Models/Block.h"
 
 class GameManager;
 
@@ -16,7 +18,7 @@ private:
 	Sprite* sprite_;
 	Sphere* sphere_;
 	int textureNum_;
-	/*Input* input_;*/
+	Input* input_;
 	Vector3 pos_;
-
+	Block* block_;
 };

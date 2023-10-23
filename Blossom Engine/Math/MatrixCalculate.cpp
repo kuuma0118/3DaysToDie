@@ -63,6 +63,20 @@ Matrix4x4 MakeRotateZMatrix(float theta) {
 	return result;
 }
 
+Matrix4x4 MakeRotateMatrix(const Vector3& radian) {
+	Matrix4x4 rotateX{};
+	Matrix4x4 rotateY{};
+	Matrix4x4 rotateZ{};
+	rotateX = MakeRotateXMatrix(radian.x);
+	rotateY = MakeRotateYMatrix(radian.y);
+	rotateZ = MakeRotateZMatrix(radian.z);
+
+	Matrix4x4 result{};
+	result = Multiply(rotateX, Multiply(rotateY, rotateZ));
+
+	return result;
+}
+
 Matrix4x4 MakeAffineMatrix(const Vector3& scale, const Vector3& rotate, const Vector3& translate) {
 	Matrix4x4 result;
 	Matrix4x4 RotateX = MakeRotateXMatrix(rotate.x);
@@ -112,6 +126,15 @@ Matrix4x4 Add(const Matrix4x4& m1, const Matrix4x4& m2) {
 			result.m[i][j] = m1.m[i][j] + m2.m[i][j];
 		}
 	}
+	return result;
+}
+
+Vector3 V3Add(const Vector3& pos, const Vector3& vector) {
+	Vector3 result{};
+	result.x = pos.x + vector.x;
+	result.y = pos.y + vector.y;
+	result.z = pos.z + vector.z;
+
 	return result;
 }
 
@@ -434,5 +457,14 @@ Matrix4x4 MakeTranslateMatrix(const Vector3& translate) {
 	result.m[3][1] = translate.y;
 	result.m[3][2] = translate.z;
 	result.m[3][3] = 1;
+	return result;
+}
+
+// ベクトル変換
+Vector3 TransformNormal(const Vector3& v, const Matrix4x4& m) {
+	Vector3 result{
+		v.x * m.m[0][0] + v.y * m.m[1][0] + v.z * m.m[2][0],
+		v.x * m.m[0][1] + v.y * m.m[1][1] + v.z * m.m[2][1],
+		v.x * m.m[0][2] + v.y * m.m[1][2] + v.z * m.m[2][2] };
 	return result;
 }

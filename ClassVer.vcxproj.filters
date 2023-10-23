@@ -63,6 +63,18 @@
     <Filter Include="Blossom Engine\components\Input">
       <UniqueIdentifier>{43c568bc-e356-451d-be35-4d7cf472adb5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Necessary">
+      <UniqueIdentifier>{f572460b-7498-45bb-98e0-3f60b212face}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Necessary\Effect">
+      <UniqueIdentifier>{4416fe7d-6ff1-4e32-8f00-88196672f5a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Necessary\Models">
+      <UniqueIdentifier>{d09fc75a-6453-46ec-8dba-1c3402daddec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Necessary\Map">
+      <UniqueIdentifier>{af5b69a9-2af4-4bf1-a85c-eea14d348af7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="externals\imgui\imgui_impl_dx12.cpp">
@@ -155,6 +167,18 @@
     </ClCompile>
     <ClCompile Include="Input\Input.cpp">
       <Filter>Blossom Engine\components\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Necessary\Effect\EffectManager.cpp">
+      <Filter>Necessary\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Necessary\Models\Block.cpp">
+      <Filter>Necessary\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Necessary\Map\Map.cpp">
+      <Filter>Necessary\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Necessary\Map\MapManager.cpp">
+      <Filter>Necessary\Map</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +292,24 @@
     </ClInclude>
     <ClInclude Include="Input\Input.h">
       <Filter>Blossom Engine\components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Effect\EffectManager.h">
+      <Filter>Necessary\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Effect\IEffect.h">
+      <Filter>Necessary\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Effect\Easing.h">
+      <Filter>Necessary\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Models\Block.h">
+      <Filter>Necessary\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Map\Map.h">
+      <Filter>Necessary\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Map\MapManager.h">
+      <Filter>Necessary\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

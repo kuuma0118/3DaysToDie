@@ -18,8 +18,7 @@
 #include "../Blossom Engine/components/light/Light.h"
 #include "../Blossom Engine/components/camera/Camera.h"
 #include "../Blossom Engine/components/camera/DebugCamera.h"
-//#include "../Blossom Engine/components/Input/Input.h"
-#include "../Input/Input.h"
+#include "../Blossom Engine/components/Input/Input.h"
 #include "../Blossom Engine/components/Audio/Audio.h"
 
 class GameManager

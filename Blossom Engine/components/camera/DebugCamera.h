@@ -1,6 +1,7 @@
 #pragma once
 #include "../Blossom Engine/Math/Vector3.h"
 #include "../Blossom Engine/Math/Matrix4x4.h"
+#include "../Blossom Engine/Math/MatrixCalculate.h"
 
 class DebugCamera
 {
@@ -11,7 +12,7 @@ public:
 
 	void Update();
 
-	//void SetRotationCenterPosition();
+	void SetRotationCenterPosition();
 
 	Matrix4x4 GetViewMatrix() { return viewMatrix_; }
 

@@ -207,14 +207,14 @@ void BlossomEngine::SettingRasterizerState() {
 }
 
 void BlossomEngine::PixelSharder() {
-	pixelShaderBlob_ = CompileShader(L"Object3d.PS.hlsl",
+	pixelShaderBlob_ = CompileShader(L"shader/Object3d.PS.hlsl",
 		L"ps_6_0", dxcUtils_, dxcCompiler_, includeHandler_);
 	assert(pixelShaderBlob_ != nullptr);
 }
 
 void BlossomEngine::VertexSharder() {
 	// Shaderをコンパイルする
-	vertexShaderBlob_ = CompileShader(L"Object3d.VS.hlsl",
+	vertexShaderBlob_ = CompileShader(L"shader/Object3d.VS.hlsl",
 		L"vs_6_0", dxcUtils_, dxcCompiler_, includeHandler_);
 	assert(vertexShaderBlob_ != nullptr);
 }

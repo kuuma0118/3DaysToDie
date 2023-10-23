@@ -1,8 +1,7 @@
 #pragma once
 
 #include "IScene.h"
-
-//#include "../components/camera/DebugCamera.h"
+#include "../Necessary/Map/MapManager.h"
 #include "../Blossom Engine/components/camera/DebugCamera.h"
 
 class GameManager;
@@ -24,7 +23,7 @@ private:
 	DebugCamera* camera_ = nullptr;
 
 	//// マップデータ
-	//Map* map_ = nullptr;
+	Map* map_ = nullptr;
 
 	// デバッグ用の変数
 	int loadStageNum_ = 0;	// 読み込むステージの番号
