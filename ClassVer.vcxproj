@@ -98,6 +98,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Blossom Engine\components\Audio\Audio.cpp" />
     <ClCompile Include="Blossom Engine\components\camera\Camera.cpp" />
     <ClCompile Include="Blossom Engine\components\camera\DebugCamera.cpp" />
+    <ClCompile Include="Blossom Engine\components\Input\Input.cpp" />
     <ClCompile Include="Blossom Engine\components\light\Light.cpp" />
     <ClCompile Include="Blossom Engine\GameScenes\GameScene.cpp" />
     <ClCompile Include="Blossom Engine\GameScenes\IScene.cpp" />
@@ -119,7 +120,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="externals\imgui\imgui_tables.cpp" />
     <ClCompile Include="externals\imgui\imgui_widgets.cpp" />
     <ClCompile Include="ImGui\ImGuiManager.cpp" />
-    <ClCompile Include="Input\Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager\GameManager.cpp" />
     <ClCompile Include="Manager\ObjManager.cpp" />
@@ -135,6 +135,7 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="Blossom Engine\components\Audio\Audio.h" />
     <ClInclude Include="Blossom Engine\components\camera\Camera.h" />
     <ClInclude Include="Blossom Engine\components\camera\DebugCamera.h" />
+    <ClInclude Include="Blossom Engine\components\Input\Input.h" />
     <ClInclude Include="Blossom Engine\components\light\Light.h" />
     <ClInclude Include="Blossom Engine\GameScenes\GameScene.h" />
     <ClInclude Include="Blossom Engine\GameScenes\IScene.h" />
@@ -163,7 +164,6 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="externals\imgui\imstb_textedit.h" />
     <ClInclude Include="externals\imgui\imstb_truetype.h" />
     <ClInclude Include="ImGui\ImGuiManager.h" />
-    <ClInclude Include="Input\Input.h" />
     <ClInclude Include="Manager\GameManager.h" />
     <ClInclude Include="Manager\ObjManager.h" />
     <ClInclude Include="Manager\PipelineManager.h" />
