@@ -165,9 +165,6 @@
     <ClCompile Include="Blossom Engine\GameScenes\IScene.cpp">
       <Filter>Blossom Engine\GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="Input\Input.cpp">
-      <Filter>Blossom Engine\components\Input</Filter>
-    </ClCompile>
     <ClCompile Include="Necessary\Effect\EffectManager.cpp">
       <Filter>Necessary\Effect</Filter>
     </ClCompile>
@@ -179,6 +176,9 @@
     </ClCompile>
     <ClCompile Include="Necessary\Map\MapManager.cpp">
       <Filter>Necessary\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Blossom Engine\components\Input\Input.cpp">
+      <Filter>Blossom Engine\components\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -290,9 +290,6 @@
     <ClInclude Include="Blossom Engine\utility\GlobalVariables.h">
       <Filter>Blossom Engine\utility</Filter>
     </ClInclude>
-    <ClInclude Include="Input\Input.h">
-      <Filter>Blossom Engine\components\Input</Filter>
-    </ClInclude>
     <ClInclude Include="Necessary\Effect\EffectManager.h">
       <Filter>Necessary\Effect</Filter>
     </ClInclude>
@@ -310,6 +307,9 @@
     </ClInclude>
     <ClInclude Include="Necessary\Map\MapManager.h">
       <Filter>Necessary\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Blossom Engine\components\Input\Input.h">
+      <Filter>Blossom Engine\components\Input</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
