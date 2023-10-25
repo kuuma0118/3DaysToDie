@@ -131,6 +131,8 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClCompile Include="Necessary\Models\Block.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\ClassVer\Blossom Engine\utility\Transform.h" />
+    <ClInclude Include="..\..\ClassVer\Blossom Engine\utility\TransformationMatrix.h" />
     <ClInclude Include="Blossom Engine\Common\Common.h" />
     <ClInclude Include="Blossom Engine\components\Audio\Audio.h" />
     <ClInclude Include="Blossom Engine\components\camera\Camera.h" />
