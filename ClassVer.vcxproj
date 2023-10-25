@@ -156,6 +156,8 @@ copy "$(WindowsSdkDir)bin\$(TargetPlatformVersion)\x64\dxil.dll" "$(TargetDir)dx
     <ClInclude Include="Blossom Engine\utility\GlobalVariables.h" />
     <ClInclude Include="Blossom Engine\utility\MaterialData.h" />
     <ClInclude Include="Blossom Engine\utility\resource.h" />
+    <ClInclude Include="Blossom Engine\utility\Transform.h" />
+    <ClInclude Include="Blossom Engine\utility\TransformationMatrix.h" />
     <ClInclude Include="Blossom Engine\WinApp\WinApp.h" />
     <ClInclude Include="externals\imgui\imconfig.h" />
     <ClInclude Include="externals\imgui\imgui.h" />

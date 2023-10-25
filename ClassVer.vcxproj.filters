@@ -317,6 +317,12 @@
     <ClInclude Include="..\..\ClassVer\Blossom Engine\utility\TransformationMatrix.h">
       <Filter>Blossom Engine\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Blossom Engine\utility\Transform.h">
+      <Filter>Blossom Engine\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Blossom Engine\utility\TransformationMatrix.h">
+      <Filter>Blossom Engine\utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
