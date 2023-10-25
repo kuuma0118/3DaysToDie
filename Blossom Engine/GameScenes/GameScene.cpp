@@ -18,7 +18,7 @@ void GameScene::Update() {
 	ImGui::End();
 
 	map_->Update();
-
+	model_->Updata();
 }
 
 

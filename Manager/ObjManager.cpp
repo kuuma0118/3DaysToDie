@@ -1,6 +1,7 @@
 #include "ObjManager.h"
 #include <cassert>
 
+
 ObjManager* ObjManager::GetInstance() {
 	static ObjManager instance;
 
@@ -18,7 +19,6 @@ void ObjManager::LoadObjFiles() {
 	//modelData_[MULTIMATERIAL] = LoadObjFile("resources", "multiMaterial.obj");
 	//modelData_[BUNNY] = LoadObjFile("resources", "bunny.obj");
 }
-
 ModelData ObjManager::LoadObjFile(const std::string& directoryPath, const std::string& filename) {
 	ModelData modelData;
 	std::vector<Vector4> positions;
@@ -37,10 +37,6 @@ ModelData ObjManager::LoadObjFile(const std::string& directoryPath, const std::s
 		if (identifier == "v") {
 			Vector4 position;
 			s >> position.x >> position.y >> position.z;
-			position.z *= -1.0f;
-			if (input_->PressKey(DIK_SPACE)) {
-				position.z -= 10.f;
-			}
 			position.w = 1.0f;
 			positions.push_back(position);
 		}
@@ -89,7 +85,9 @@ ModelData ObjManager::LoadObjFile(const std::string& directoryPath, const std::s
 			// 基本的にobjファイルと同一階層にmtlは存在させるので、ディレクトリ名とファイル名を渡す
 			modelData.material = LoadMaterialTemplateFile(directoryPath, materialFilename);
 		}
+		
 	}
+
 
 	return modelData;
 }

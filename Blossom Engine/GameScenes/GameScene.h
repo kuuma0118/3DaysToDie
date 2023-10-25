@@ -3,6 +3,7 @@
 #include "IScene.h"
 #include "../Necessary/Map/MapManager.h"
 #include "../Blossom Engine/components/camera/DebugCamera.h"
+#include "Blossom Engine/Model/Model.h"
 
 class GameManager;
 class GameScene : public IScene
@@ -27,4 +28,6 @@ private:
 
 	// デバッグ用の変数
 	int loadStageNum_ = 0;	// 読み込むステージの番号
+
+	Model* model_ = nullptr;
 };

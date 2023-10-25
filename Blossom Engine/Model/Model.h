@@ -11,6 +11,7 @@
 #include "../Blossom Engine/Math/MatrixCalculate.h"
 #include "../Manager/TextureManager.h"
 #include "../Common/Common.h"
+#include "Blossom Engine/components/Input/Input.h"
 
 class Model {
 public: // メンバ関数
@@ -25,6 +26,8 @@ public: // メンバ関数
 	void CreateMaterialResource();
 
 	void CreateWvpResource();
+
+	void Updata();
 
 	void Initialize();	// 初期化
 	//void Update();	// 更新
@@ -58,9 +61,11 @@ private: // メンバ変数
 	Matrix4x4 viewMatrix_;
 	Matrix4x4 projectionMatrix_;
 	Matrix4x4 worldViewProjectionMatrix_;
-
+	float speed = 10;
 	// モデルのポインタ
 	ModelData modelDate_;
 	// ワールドトランスフォーム
 	//WorldTransform worldTransform_;
+	Input* input_ = nullptr;
+	float inputFloat = 0;
 };

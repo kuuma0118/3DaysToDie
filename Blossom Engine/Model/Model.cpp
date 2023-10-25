@@ -57,6 +57,28 @@ void Model::CreateWvpResource() {
 	transformationMatrixData_->WVP = MakeIdentity4x4();
 }
 
+void Model::Updata()
+{
+
+	//キャラクター移動ベクトル
+	Vector3 move = { 0,0,0 };
+	//キャラクターの移動速さ
+	const float kCharacterSpeed = 1.0f;
+
+	//押した方向で移動ベクトルを変更(左右)
+	if (input_->PressKey(DIK_A)) {
+		move.x -= kCharacterSpeed;
+	}
+	else if (input_->PressKey(DIK_D)) {
+		move.x += kCharacterSpeed;
+	}
+	if (input_->PressKey(DIK_SPACE)) {
+		move.z -= kCharacterSpeed;
+	}
+	uvTransform_.translate = V3Add(uvTransform_.translate, move);
+	transformationMatrixData_->World = MakeAffineMatrix(transform.scale, transform.rotate, transform.translate);
+}
+
 void Model::Initialize() {
 	
 	modelDate_ = ObjManager::GetInstance()->GetObjModelData()[block];
@@ -84,6 +106,7 @@ void Model::Initialize() {
 	materialData_->enableLightning = false;
 
 	materialData_->uvTransform = MakeIdentity4x4();
+	input_ = Input::GetInstance();
 }
 
 void Model::Draw() {
