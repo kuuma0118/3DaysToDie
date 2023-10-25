@@ -75,6 +75,9 @@
     <Filter Include="Necessary\Map">
       <UniqueIdentifier>{af5b69a9-2af4-4bf1-a85c-eea14d348af7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Necessary\Utility">
+      <UniqueIdentifier>{37cdef2d-60e1-4a4c-9e54-ac8e9b83340e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="externals\imgui\imgui_impl_dx12.cpp">
@@ -179,6 +182,9 @@
     </ClCompile>
     <ClCompile Include="Blossom Engine\components\Input\Input.cpp">
       <Filter>Blossom Engine\components\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Necessary\Utility\AABB.cpp">
+      <Filter>Necessary\Utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +316,12 @@
     </ClInclude>
     <ClInclude Include="Blossom Engine\components\Input\Input.h">
       <Filter>Blossom Engine\components\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Utility\AABB.h">
+      <Filter>Necessary\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Necessary\Utility\ABUtility.h">
+      <Filter>Necessary\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
