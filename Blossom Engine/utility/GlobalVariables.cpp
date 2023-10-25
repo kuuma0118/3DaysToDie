@@ -352,69 +352,69 @@ void GlobalVariables::LoadFiles() {
 }
 
 void GlobalVariables::Update() {
-	if (!ImGui::Begin("Global Variables", nullptr, ImGuiWindowFlags_MenuBar)) {
-		ImGui::End();
-		return;
-	}
-	if (!ImGui::BeginMenuBar())
-		return;
+	//if (!ImGui::Begin("Global Variables", nullptr, ImGuiWindowFlags_MenuBar)) {
+	//	ImGui::End();
+	//	return;
+	//}
+	//if (!ImGui::BeginMenuBar())
+	//	return;
 
-	for (std::map<std::string, Group>::iterator itGroup = datas_.begin(); itGroup != datas_.end();
-		++itGroup) {
-		// グループ名を取得
-		const std::string& groupName = itGroup->first;
-		// グループの参照を取得
-		Group& group = itGroup->second;
+	//for (std::map<std::string, Group>::iterator itGroup = datas_.begin(); itGroup != datas_.end();
+	//	++itGroup) {
+	//	// グループ名を取得
+	//	const std::string& groupName = itGroup->first;
+	//	// グループの参照を取得
+	//	Group& group = itGroup->second;
 
-		if (!ImGui::BeginMenu(groupName.c_str()))
-			continue;
+	//	if (!ImGui::BeginMenu(groupName.c_str()))
+	//		continue;
 
-		// 各項目について
-		for (std::map<std::string, Item>::iterator itItem = group.items.begin();
-			itItem != group.items.end(); ++itItem) {
-			// 各項目を取得
-			const std::string& itemName = itItem->first;
-			// 項目の参照を取得
-			Item& item = itItem->second;
-			// int32_tの値を保持している場合
-			if (std::holds_alternative<int32_t>(item.value)) {
-				int32_t* ptr = std::get_if<int32_t>(&item.value);
-				ImGui::SliderInt(itemName.c_str(), ptr, 0, 100);
-			} // floatの値を保持している場合
-			else if (std::holds_alternative<float>(item.value)) {
-				float* ptr = std::get_if<float>(&item.value);
-				ImGui::SliderFloat(itemName.c_str(), ptr, 0, 100);
-			} // Vector2の値を保持している場合
-			else if (std::holds_alternative<Vector2>(item.value)) {
-				Vector2* ptr = std::get_if<Vector2>(&item.value);
-				ImGui::SliderFloat2(itemName.c_str(), reinterpret_cast<float*>(ptr), -10.0f, 10.0f);
-			}// Vector3の値を保持している場合
-			else if (std::holds_alternative<Vector3>(item.value)) {
-				Vector3* ptr = std::get_if<Vector3>(&item.value);
-				ImGui::SliderFloat3(itemName.c_str(), reinterpret_cast<float*>(ptr), -10.0f, 10.0f);
-			}// Vector4の値を保持している場合
-			else if (std::holds_alternative<Vector4>(item.value)) {
-				Vector4* ptr = std::get_if<Vector4>(&item.value);
-				ImGui::ColorEdit4(itemName.c_str(), reinterpret_cast<float*>(ptr));
-			}
-		}
+	//	// 各項目について
+	//	for (std::map<std::string, Item>::iterator itItem = group.items.begin();
+	//		itItem != group.items.end(); ++itItem) {
+	//		// 各項目を取得
+	//		const std::string& itemName = itItem->first;
+	//		// 項目の参照を取得
+	//		Item& item = itItem->second;
+	//		// int32_tの値を保持している場合
+	//		if (std::holds_alternative<int32_t>(item.value)) {
+	//			int32_t* ptr = std::get_if<int32_t>(&item.value);
+	//			ImGui::SliderInt(itemName.c_str(), ptr, 0, 100);
+	//		} // floatの値を保持している場合
+	//		else if (std::holds_alternative<float>(item.value)) {
+	//			float* ptr = std::get_if<float>(&item.value);
+	//			ImGui::SliderFloat(itemName.c_str(), ptr, 0, 100);
+	//		} // Vector2の値を保持している場合
+	//		else if (std::holds_alternative<Vector2>(item.value)) {
+	//			Vector2* ptr = std::get_if<Vector2>(&item.value);
+	//			ImGui::SliderFloat2(itemName.c_str(), reinterpret_cast<float*>(ptr), -10.0f, 10.0f);
+	//		}// Vector3の値を保持している場合
+	//		else if (std::holds_alternative<Vector3>(item.value)) {
+	//			Vector3* ptr = std::get_if<Vector3>(&item.value);
+	//			ImGui::SliderFloat3(itemName.c_str(), reinterpret_cast<float*>(ptr), -10.0f, 10.0f);
+	//		}// Vector4の値を保持している場合
+	//		else if (std::holds_alternative<Vector4>(item.value)) {
+	//			Vector4* ptr = std::get_if<Vector4>(&item.value);
+	//			ImGui::ColorEdit4(itemName.c_str(), reinterpret_cast<float*>(ptr));
+	//		}
+	//	}
 
-		// 改行
-		ImGui::Text("\n");
+	//	// 改行
+	//	ImGui::Text("\n");
 
-		if (ImGui::Button("Save")) {
-			SaveFile(groupName);
-			std::string message = std::format("{}.json saved.", groupName);
-			MessageBoxA(nullptr, message.c_str(), "GlobalVariables", 0);
-			isSave_ = true;
-		}
-		if (isSave_) {
-			isSave_ = false;
-		}
-		ImGui::EndMenu();
-	}
+	//	if (ImGui::Button("Save")) {
+	//		SaveFile(groupName);
+	//		std::string message = std::format("{}.json saved.", groupName);
+	//		MessageBoxA(nullptr, message.c_str(), "GlobalVariables", 0);
+	//		isSave_ = true;
+	//	}
+	//	if (isSave_) {
+	//		isSave_ = false;
+	//	}
+	//	ImGui::EndMenu();
+	//}
 
 
-	ImGui::EndMenuBar();
-	ImGui::End();
+	//ImGui::EndMenuBar();
+	//ImGui::End();
 }

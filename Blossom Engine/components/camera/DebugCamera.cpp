@@ -22,10 +22,7 @@ void DebugCamera::Initialize() {
 }
 
 void DebugCamera::Update() {
-	ImGui::Begin("DebugCamera");
-	ImGui::DragFloat3("camera offset", &offset_.x, 0.1f);
-	ImGui::DragFloat3("camera rotation", &offsetRotation_.x, 0.01f);
-	ImGui::End();
+
 
 	// コントローラーでの操作
 	InputController();

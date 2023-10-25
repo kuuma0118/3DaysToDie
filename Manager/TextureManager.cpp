@@ -23,6 +23,7 @@ void TextureManager::TransferTexture(const Microsoft::WRL::ComPtr<ID3D12Descript
 	mipImages_[UVCHEKER] = LoadTexture("Resources/uvChecker.png");
 	mipImages_[MONSTERBALL] = LoadTexture("Resources/monsterBall.png");
 	mipImages_[BLOCK] = LoadTexture("Resources/block/block.png");
+	mipImages_[TITLENAME] = LoadTexture("TDResource/swine.png");
 
 	DirectX::TexMetadata metadata[kMaxImages]{};
 	for (uint32_t i = 0; i < kMaxImages; i++) {

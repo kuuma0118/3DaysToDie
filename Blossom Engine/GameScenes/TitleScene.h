@@ -15,10 +15,11 @@ public:
 	void Draw() override;
 	void Finalize()override;
 private:
-	Sprite* sprite_;
-	Sphere* sphere_;
-	int textureNum_;
+	Sprite* titleName_;
+
 	Input* input_;
-	Vector3 pos_;
-	Block* block_;
+
+	Vector2 titleNamePos_;
+	float theta_;
+	bool preA = false;
 };

@@ -13,9 +13,7 @@ void GameScene::Initialize() {
 
 void GameScene::Update() {
 
-	ImGui::Begin("GameScene Debug");
-	ImGui::SliderInt("loadStageLevel", &loadStageNum_, 0, 7);
-	ImGui::End();
+
 
 	map_->Update();
 	model_->Updata();

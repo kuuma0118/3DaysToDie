@@ -13,7 +13,7 @@ GameManager::GameManager() {
 
 void GameManager::Initialize() {
 
-	const char kWindowTitle[] = "CG2_CLASS";
+	const char kWindowTitle[] = "SWINE";
 	// タイトルバーの変換
 	auto&& titleString = ConvertString(kWindowTitle);
 
@@ -163,20 +163,20 @@ void GameManager::EndFrame() {
 }
 
 void GameManager::ImGuiAdjustParameter() {
-	ImGui::Begin("CommonSettings");
-	if (ImGui::BeginTabBar("CommonTabBar"))
-	{
-		// カメラのImGui
-		if (ImGui::BeginTabItem("Camera")) {
-			camera_->Camera::GetInstance()->DrawDebugParameter();
-			ImGui::EndTabItem();
-		}
-		// ライトのImGui
-		if (ImGui::BeginTabItem("Half Lambert")) {
-			light_->ImGuiAdjustParameter();
-			ImGui::EndTabItem();
-		}
-		ImGui::EndTabBar();
-	}
-	ImGui::End();
+	//ImGui::Begin("CommonSettings");
+	//if (ImGui::BeginTabBar("CommonTabBar"))
+	//{
+	//	// カメラのImGui
+	//	if (ImGui::BeginTabItem("Camera")) {
+	//		camera_->Camera::GetInstance()->DrawDebugParameter();
+	//		ImGui::EndTabItem();
+	//	}
+	//	// ライトのImGui
+	//	if (ImGui::BeginTabItem("Half Lambert")) {
+	//		light_->ImGuiAdjustParameter();
+	//		ImGui::EndTabItem();
+	//	}
+	//	ImGui::EndTabBar();
+	//}
+	//ImGui::End();
 }

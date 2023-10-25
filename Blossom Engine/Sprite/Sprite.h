@@ -11,7 +11,7 @@ class Sprite
 public:
 	~Sprite();
 
-	void Initialize();
+	void Initialize(Vector3 leftTop, Vector3 rightBottom);
 
 	/// <summary>
 	/// 描画処理

@@ -1,28 +1,23 @@
 #include "TitleScene.h"
 
 void TitleScene::Initialize() {
-	sprite_ = new Sprite();
-	sprite_->Initialize();
-	sphere_ = new Sphere();
-	sphere_->Initialize();
-	textureNum_ = UVCHEKER;
-	input_ = Input::GetInstance();
-	block_ = new Block();
-	block_->Initialize();
-	block_->textureNum = BLOCK;
-	pos_ = { 0,0,30 };
+	// タイトルの初期位置
+	titleNamePos_ = { 128,100 };
+	// タイトル
+	titleName_ = new Sprite();
+	titleName_->Initialize({ 0,0,1 }, { 1280,720,1 });
 }
 
 void TitleScene::Update() {
-
+	// タイトルを上下に動かす
+	theta_ += 1.0f / 90.0f * (float)M_PI;
+	titleNamePos_.y += sinf(theta_) * 0.25f;
 }
 
 void TitleScene::Draw() {
-	block_->Draw();
+	titleName_->Draw({ 0,0,0 }, TITLENAME);
 }
 
 void TitleScene::Finalize() {
-	delete sprite_;
-	delete sphere_;
-	delete block_;
+	delete titleName_;
 }
