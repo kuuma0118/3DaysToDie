@@ -13,7 +13,7 @@ GameManager::GameManager() {
 
 void GameManager::Initialize() {
 
-	const char kWindowTitle[] = "SWINE";
+	const char kWindowTitle[] = "2127_SWINE";
 	// タイトルバーの変換
 	auto&& titleString = ConvertString(kWindowTitle);
 
